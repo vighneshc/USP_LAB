@@ -1,18 +1,15 @@
 #!/bin/bash
-c=2
+echo "Enter the number N"
+read N
 a=0
 b=1
-d=0
-echo  "enter the number of elements"
-read n
-echo $a
-echo $b
-while [ $c -lt $n ]
+
+echo "The Fibonacci series is : "
+
+for (( i=0; i<$N; i++ ))
 do
-  c=`expr $c + 1`
-  d=`expr $a + $b`
-  echo "$d"
-  a=$b
-  b=$d
-  
+	echo -n "$a "
+	fn=$((a + b))
+	a=$b
+	b=$fn
 done
